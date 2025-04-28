@@ -1,0 +1,28 @@
+package com.digri.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public class TableSrv extends GenericServlet {
+
+	public void service(ServletRequest req,ServletResponse res)throws ServletException,IOException{
+		
+		PrintWriter pw=res.getWriter();
+		
+		res.setContentType("text/html");
+		
+		pw.println("<table boarder=1>");
+		pw.println("<thead>");
+		pw.println("<tr><th>SNO</th><th>SNAME</th><th>SADD</th></tr>");
+		
+		
+		pw.println("</thead>");
+		pw.println("</table>");
+	}
+
+}

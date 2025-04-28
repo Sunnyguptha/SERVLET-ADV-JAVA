@@ -1,0 +1,26 @@
+<html>
+<body>
+    <form action="vote" method="get">
+        <fieldset>
+            <legend>Details</legend>
+
+            <table>
+                <tr>
+                    <td><label>Name:</label></td>
+                    <td><input type="text" name="t1" placeholder="Enter your name..." /></td>
+                </tr>
+
+                <tr>
+                    <td><label>Age :</label></td>
+                    <td><input type="text" name="t2" placeholder="Enter your age.." /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="VOTE" /></td>
+                </tr>
+            </table>
+
+        </fieldset>
+    </form>
+</body>
+</html>

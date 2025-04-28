@@ -1,0 +1,33 @@
+
+
+<body>
+
+	<form>
+		<fieldset>
+			<legend>Details</legend>
+
+			<tr>
+
+				<td><label>Name:</label></td>
+
+				<td><input type="text" name="t1"
+					placeholder="Enter your name..." /></td>
+			</tr>
+
+			<tr>
+				<td><label>Address :</label></td>
+
+				<td><input type="number" name="t2"
+					placeholder="Enter your age.." /></td>
+
+			</tr>
+
+			<tr>
+
+				<td><input type="submit" value="VOTE" /></td>
+
+			</tr>
+		</fieldset>
+	</form>
+</body>
+</html>

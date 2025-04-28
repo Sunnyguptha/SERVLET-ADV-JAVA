@@ -1,0 +1,33 @@
+protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    res.setContentType("text/html");
+    PrintWriter pw = res.getWriter();
+
+    String sno = req.getParameter("t1");
+    int no = Integer.parseInt(sno);
+    String name = req.getParameter("t2");
+    String add = req.getParameter("t3");
+
+    String qry = "insert into studentVag values(?,?,?)";
+
+    try {
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+
+        try (Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "sunnydb1", "pass");
+             PreparedStatement ps = con.prepareStatement(qry)) {
+
+            ps.setInt(1, no);
+            ps.setString(2, name);
+            ps.setString(3, add);
+
+            int result = ps.executeUpdate();
+
+            if (result == 0)
+                pw.println("<center><h1>Record not inserted</h1></center>");
+            else
+                pw.println("<center><h1>Record inserted successfully</h1></center>");
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+        pw.println("<center><h1 style='color:red;'>Error: " + e.getMessage() + "</h1></center>");
+    }
+}

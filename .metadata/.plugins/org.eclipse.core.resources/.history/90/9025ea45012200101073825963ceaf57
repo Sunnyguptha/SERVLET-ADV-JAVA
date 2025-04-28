@@ -1,0 +1,28 @@
+package com.digrii.servlet_adv;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Calendar;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class WishSrv extends HttpServlet {
+
+	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException,IOException{
+		PrintWriter pw=res.getWriter();
+		res.setContentType("text/html");
+		
+		Calendar c=Calendar.getInstance();
+		int h=c.get(Calendar.HOUR_OF_DAY);
+		
+		if(h<12)
+			pw.println("<center><h1>Morning Friends</h1></center>");
+		else if(h<16)
+		
+		
+		
+	}
+}

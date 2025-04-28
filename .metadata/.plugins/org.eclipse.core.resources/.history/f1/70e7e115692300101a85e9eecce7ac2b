@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+	<form action="test1' method="post">
+
+		<fieldset>
+
+			<table>
+
+				<tr>
+						<td>
+							<label>No:</label>
+						</td>
+						
+						<td>
+							<input type="number" name="t1"> <br>
+						</td>
+				</tr>
+
+				<tr>
+					
+						<td>
+							<label>Name:</label>
+						
+						</td>
+
+						<td>
+								<input type="text" name="t2"> <br>
+						</td>
+				</tr>
+
+				<tr>
+						<td>
+							<label>Address:</label>
+						
+						</td>
+						
+						<td>
+						<input type="text" name="t3"> <br>
+						
+					</td>
+
+				</tr>
+	
+				<tr>
+				
+					<td>
+						<input type="submit" value="LogIn">
+					
+					</td>
+				
+				</tr>
+			</table>
+
+
+
+		</fieldset>
+
+	</form>
+</body>
+</html>
